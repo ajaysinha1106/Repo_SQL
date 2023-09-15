@@ -1,0 +1,72 @@
+Note: please do not use any functions which are not taught in the class. you need to solve the questions only with the concepts that have been discussed so far.
+
+1- Run below table script to create icc_world_cup table:
+
+create table icc_world_cup
+(
+Team_1 Varchar(20),
+Team_2 Varchar(20),
+Winner Varchar(20)
+);
+INSERT INTO icc_world_cup values('India','SL','India');
+INSERT INTO icc_world_cup values('SL','Aus','Aus');
+INSERT INTO icc_world_cup values('SA','Eng','Eng');
+INSERT INTO icc_world_cup values('Eng','NZ','NZ');
+INSERT INTO icc_world_cup values('Aus','India','India');
+
+ write a query to produce below output from icc_world_cup table.
+team_name, no_of_matches_played , no_of_wins , no_of_losses
+
+
+2- Run below script to create drivers table:
+
+create table drivers(id varchar(10), start_time time, end_time time, start_loc varchar(10), end_loc varchar(10));
+insert into drivers values('dri_1', '09:00', '09:30', 'a','b'),('dri_1', '09:30', '10:30', 'b','c'),('dri_1','11:00','11:30', 'd','e');
+insert into drivers values('dri_1', '12:00', '12:30', 'f','g'),('dri_1', '13:30', '14:30', 'c','h');
+insert into drivers values('dri_2', '12:15', '12:30', 'f','g'),('dri_2', '13:30', '14:30', 'c','h');
+
+write a query to print below output using drivers table. Profit rides are the no of rides where end location of a ride is same as start location of immediate next ride for a driver
+id, total_rides , profit_rides
+dri_1,5,1
+dri_2,2,0
+
+
+3-write a query to print below output from orders data. example output
+hierarchy type,hierarchy name ,total_sales_in_west_region,total_sales_in_east_region
+category , Technology, ,
+category, Furniture, ,
+category, Office Supplies, ,
+sub_category, Art , ,
+sub_category, Furnishings, ,
+--and so on all the category ,subcategory and ship_mode hierarchies 
+
+============================================================================
+
+login on https://datalemur.com/questions 
+
+username : sql.namaste@gmail.com
+password : Namastesql22
+
+solve below questions. You can write SQLs and verify on the platform itself.
+
+Since these are common credentials . If you already see any solution writeen, please remove it and try to write your query.
+
+Note : The platform supports only postgreSQL so there may be few diffrences in functions. Listing down some important diffrences:
+
+SQL server -> postgreSQL
+to extract a part of the date
+datepart(day,order_date) -> extract (day from order_date)
+
+to convert datetime/timestamp field to date or any other type of type casting 
+cast(order_date as date) -> order_date::date
+
+1- https://datalemur.com/questions/matching-skills
+2- https://datalemur.com/questions/sql-page-with-no-likes
+3- https://datalemur.com/questions/tesla-unfinished-parts
+4- https://datalemur.com/questions/laptop-mobile-viewership
+5- https://datalemur.com/questions/sql-average-post-hiatus-1
+6- https://datalemur.com/questions/teams-power-users
+7- https://datalemur.com/questions/completed-trades
+8- https://datalemur.com/questions/sql-avg-review-ratings
+9- https://datalemur.com/questions/click-through-rate
+10-https://datalemur.com/questions/second-day-confirmation
